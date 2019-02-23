@@ -4,7 +4,8 @@ Put here general information about the steps you took, what you liked, disliked,
 
 ## HDP Sandbox
 
-I started using the Sandbox and I ...
+I started downloading HDP Sandbox first using virtual machine. I read prerequisite for the same. I need minimum 10GB of RAM dedicated to virtual machine. But my computer RAM is just 4GB. Which was not enough.
+So then i used microsoft Azure on cloud due to its flexibility and cost benefits 
 
 ## HDFS & Hive on Spark
 
