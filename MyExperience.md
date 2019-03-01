@@ -65,18 +65,17 @@ I followed it. And downloaded IntelliJ and JDK kit as mentioned in doc.
  
  4.) I searched how to upload csv file in sandbox. First i started with 1 file "drivers.csv"Again, it was not easy to communicate with hadoop. I created jar file and ran spark-submit. I was able to upload file and could view in Ambari. And then i worked for list of files.
  
- 6.) Setting up library depencies in "Build.sbt" took long more of my time.
- 
+ 6.) Setting up library dependencies in "Build.sbt" took long more of my time.
+  
  7.) Then, setting up "SparkSession" variable and pointing it to sandbox was also tough. I followed google tips and docs. But with too many and different kind of ideas were really confusing.I just tried and tried further.
  
  9.) My sandbox also got very slow and i was not able to communicate with my sandbox many times. I got connection refused error on my ambari and terminal. 
  
  10. I restarted my sandbox 3-4 times. May be because of that, my free trial amount is consumed fully today. 
  
-   
-## HBase
-
-I did A because of B...
-<br>I had issues with C...
-<br>I liked doing D...
+ 11.) I followed docs to undestand about dataframe. How it works but i could not work on that.
+ 
+ It was really nice and challenging experience. Though i could not finish task,I learned many things about hadoop, scala and spark.
+ I want to finished undone task, just for my knowledge and curisity, i am continuing creating anothrr free trial account.
+ 
 
