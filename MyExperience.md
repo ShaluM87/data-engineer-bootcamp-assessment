@@ -68,11 +68,11 @@ I followed it. And downloaded IntelliJ and JDK kit as mentioned in doc.
   
  7.) Afterwards, setting up "SparkSession" variable and pointing it to sandbox was also tough. I followed google tips and docs. But with too many options and different kinds of ideas were really confusing.I just tried and tried further.
  
- 9.) My sandbox also got very slow and i was not able to communicate with my sandbox many times. I got connection refused error on my ambari and terminal. 
+ 9.) I was not able to communicate with my sandbox many times as services got very slow. I got "connection refused error" on my ambari and terminal. 
  
  10. I restarted my sandbox 3-4 times. May be because of that, my free trial amount is consumed fully today. 
  
- 11.) I followed docs to undestand about dataframe. How it works but i could not work on that.
+ 11.) I followed docs to understand about dataframe. How it works but i could not work on that.
  
  It was really nice and challenging experience. Though I could not finish task,I learned many things about hadoop, scala and spark. Thanks for providing me a chance to work on these environments. Looking forward for the next step.
 
