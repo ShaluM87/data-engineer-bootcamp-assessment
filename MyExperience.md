@@ -3,11 +3,16 @@
 Put here general information about the steps you took, what you liked, disliked, why did you do X instead of Y and so on.
 
 ## HDP Sandbox
-1.) I started downloading HDP Sandbox first on my machine. and dowloaded virtual box It was 20 gb file. And going to take too long. By that, I started reading document provided Learning the Ropes of the HDP Sandbox.
+1.) I started downloading HDP Sandbox first on my machine. and dowloaded virtual box It was 20 gb file. And going to take too long. By that time, I started reading document provided "Learning the Ropes of the HDP Sandbox".
+
 2.) I read prerequisite for the sandbox in my local machine. I need minimum 10GB of RAM dedicated to virtual machine. But my computer RAM is just 4GB. Which was not enough. So i paused the download and  decided to go for cloud due to its flexibility, cost benefits and also for more memory.
+
 3.) I was not having microsoft azure account as i am using it first time and have no idea how cloud works.
-4.)  I followed documentation for CREATE HORTONWORKS DATA PLATFORM SANDBOX IN AZURE. I created my microsoft Azure account and started created sandbox. 
-5.) In my first glance on docs, i thought i need to pay for cloud service. But still continuing trying creating sandbox with free trail option.  At the first, i got error of free trial quota of memory usage. 
+
+4.)  I followed documentation for CREATE HORTONWORKS DATA PLATFORM SANDBOX IN AZURE. I created my microsoft Azure account and started created sandbox.
+
+5.) In my first glance on docs, i thought i need to pay for cloud service. But still continuing trying creating sandbox with free trail option.  At the first, i got error of free trial quota of memory usage.
+
 6.) On checking the error, i decreased sixe of memory usagefrom 16GB to 8GB and 2cpus. Then i was successful to create sandbox.
 
 # Created Sandbox Information: 
