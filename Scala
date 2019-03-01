@@ -1,1 +1,83 @@
 
+import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.fs.{FileStatus, FileSystem, Path}
+import java.io.File
+import org.apache.spark.sql.types.StructField
+import org.apache.spark.sql.{SaveMode, SparkSession, SQLContext}
+import org.apache.spark.sql.execution.datasources.hbase._
+
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
+
+  object HDFS {
+
+    Logger.getLogger("org").setLevel(Level.ALL)
+    Logger.getLogger("akka").setLevel(Level.ALL)
+
+    def main(args: Array[String]): Unit = {
+
+      var localPath= "C:\\Users\\xyz\\Downloads\\data-engineer-bootcamp-assessment-master\\data-engineer-bootcamp-assessment-master\\data-spark"
+      var remotePath = "/data-spark/"
+      val DFS = "hdfs://104.42.183.126:8020"
+
+      //Get HDP Files system (HDFS)
+      val hadoopConf = new Configuration()
+      hadoopConf.set("fs.defaultFS", DFS)
+      val hdfs = FileSystem.get(hadoopConf)
+
+      //Create sparkSession
+      val warehouseLocation = hdfs.getUri + "/apps/hive/warehouse"
+      val sparkSession = SparkSession.builder
+        .master("local")
+        .appName("TableToHive")
+        .config("spark.sql.warehouse.dir",warehouseLocation)
+        .config("hive.metastore.warehouse.dir", "thrift://104.42.183.126:9083")
+        .enableHiveSupport()
+        .getOrCreate()
+
+      //Get Path of files in HDFS to create tables in Hive
+      var hdpFiles = getListOfFiles(hdfs, remotePath)
+      hdpFiles.foreach(file=> loadTable(file.getPath, sparkSession, hdfs))
+
+      //Copy Files from local path to HDFS
+
+      copyFiles(localPath,remotePath, hdfs )
+
+     // hdfs.copyFromLocalFile(new Path(localPath), new Path(remotePath + localPath))
+     }
+
+   def loadTable(path: Path, sparkSession: SparkSession, hdfs: FileSystem): Unit = {
+
+      val dataFrame= sparkSession.read
+        .option("header","true")
+        .option("inferSchema", "true")
+        .csv(path.toString)
+      dataFrame.write.mode(SaveMode.Overwrite).saveAsTable(path.getName.substring(0,path.getName.indexOf(".")))
+    }
+
+  //Copy Local Files to HDFS in HDP
+  def copyFiles(localPath: String, remotePath: String, hdfs: FileSystem): Unit = {
+  val localFiles = getListOfFiles(localPath)
+    println("Asdasd")
+  localFiles.foreach( localPath => {
+    hdfs.copyFromLocalFile(new Path(localPath.toString), new Path(remotePath + localPath.getName))
+    println(localPath)
+  })
+}
+
+  //Get all files in HDFS
+  def getListOfFiles(hdfs: FileSystem, path: String): List[FileStatus]  = {
+
+  val files = hdfs.listStatus(new Path(path))
+  files.toList
+}
+
+  //Get all files in local directory
+  def getListOfFiles(dir: String):List[File] = {
+  val file = new File(dir)
+  if (file.exists && file.isDirectory) {
+  file.listFiles.filter(_.isFile).toList
+} else {
+  List[File]()
+}
+}}
