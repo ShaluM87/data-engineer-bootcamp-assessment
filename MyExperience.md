@@ -17,25 +17,25 @@ Put here general information about the steps you took, what you liked, disliked,
 
 Sandbox Information: 
 
-Resource group(change):MysandboxTest      
+Resource group(change):MysandboxTest
 
-Status:Running    
+Status:Running
 
-Location:West US        
+Location:West US    
 
 Subscription(change):Free Trial
 
-Subscription ID:642ce2fc-fad3-47f8-a829-2ced2b554627        
+Subscription ID:642ce2fc-fad3-47f8-a829-2ced2b554627 
 
-Computer name:doon      
+Computer name:doon 
 
 Operating system:Linux
 
-Size:Standard B2ms (2 vcpus, 8 GB memory)                   
+Size:Standard B2ms (2 vcpus, 8 GB memory) 
 
 Public IP address:104.42.183.126
 
-Virtual network/subnet:MysandboxTestvnet385/default         
+Virtual network/subnet:MysandboxTestvnet385/default  
 
 DNS name:Configure
 
@@ -63,6 +63,15 @@ I followed it. And downloaded IntelliJ and JDK kit as mentioned in doc.
  
  3.) And after that, i created class for HDFS n Hive. Then i go through for online training for spark fundamentals and application. Because i was using it first time and had no idea about it.
  
+ 4.) I searched how to upload csv file in sandbox. First i started with 1 file "drivers.csv"Again, it was not easy to communicate with hadoop. I created jar file and ran spark-submit. I was able to upload file and could view in Ambari. And then i worked for list of files.
+ 
+ 6.) Setting up library depencies in "Build.sbt" took long more of my time.
+ 
+ 7.) Then, setting up "SparkSession" variable and pointing it to sandbox was also tough. I followed google tips and docs. But with too many and different kind of ideas were really confusing.I just tried and tried further.
+ 
+ 9.) My sandbox also got very slow and i was not able to communicate with my sandbox many times. I got connection refused error on my ambari and terminal. 
+ 
+ 10. I restarted my sandbox 3-4 times. May be because of that, my free trial amount is consumed fully today. 
  
    
 ## HBase
