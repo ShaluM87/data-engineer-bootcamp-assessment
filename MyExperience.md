@@ -76,6 +76,6 @@ I followed it. And downloaded IntelliJ and JDK kit as mentioned in doc.
  11.) I followed docs to undestand about dataframe. How it works but i could not work on that.
  
  It was really nice and challenging experience. Though i could not finish task,I learned many things about hadoop, scala and spark.
- I want to finished undone task, just for my knowledge and curisity, i am continuing creating anothrr free trial account.
+ I want to finish undone task, just for my knowledge and curiosity, i am continuing creating another free trial account.
  
 
